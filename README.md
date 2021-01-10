@@ -15,4 +15,6 @@ Should this bork your system, simply copying the `sudo.bak` file over the modifi
 
 #### Note:  
 
-Since the script should be in your path now, you can call it to go ahead and add touchID to pam's sudo file now. After future updates wipe you're custom sudo file, this will kick in on boot and update it. 
+If you used the default location, the script should be in your path now, you can call it to go ahead and add touchID to pam's sudo file now. 
+
+After future updates wipe your custom sudo file, this will kick in on boot and update it. 
