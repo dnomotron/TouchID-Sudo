@@ -8,7 +8,11 @@ Should this bork your system, simply copying the `sudo.bak` file over the modifi
 
 ## Installation 
 
-1. Place the bash script iteslf anywhere you like.
-2. Edit `com.user.addtouch.plist` and replace `/usr/local/bin/addTouch.sh` with wherever you placed the script in step 1 above.
+1. Place the bash script itself anywhere you like. The default is `/usr/local/bin`
+2. Edit `com.user.addtouch.plist` and replace `/usr/local/bin/addTouch.sh` with the full path to the script in step 1 above.
 3. Place `com.user.addtouch.plist` file in `/Library/LaunchDaemons/`
-4. Make sure the `addTouch.sh` script is executable. 
+4. Make sure the `addTouch.sh` script is executable.
+
+#### Note:  
+
+Since the script should be in your path now, you can call it to go ahead and add touchID to pam's sudo file now. After future updates wipe you're custom sudo file, this will kick in on boot and update it. 
