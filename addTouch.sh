@@ -1,7 +1,12 @@
 #!/usr/bin/env zsh
 
-exec 1> /tmp/addtouch.log 2>&1
+# Route output to logfile
+exec 1>> /tmp/addtouch.log 2>&1
 
-if ! grep -e '^auth       sufficient     pam_tid.so$' /etc/pam.d/sudo; then
-	sudo sed -E -i '.bak' '1s/^(#.*)$/\1\nauth       sufficient     pam_tid.so/' /etc/pam.d/sudo
+# Declare auth line once
+auth_line='auth       sufficient     pam_tid.so'
+
+# Check if pam_tid.so exists, if not, add it
+if ! grep -e "^${auth_line}$" /etc/pam.d/sudo; then
+	sudo sed -E -i '.bak' "1s/^(#.*)$/\1\n${auth_line}/" /etc/pam.d/sudo
 fi
