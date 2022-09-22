@@ -13,10 +13,6 @@
 			<array>
 				<string>/usr/local/bin/addTouch.sh</string>
 			</array>
-		<key>StandardOutPath</key>
-			<string>/tmp/com.user.addtouch.log</string>
-		<key>StandardErrorPath</key>
-			<string>/tmp/com.user.addtouch.log</string>
 		<key>UserName</key>
 			<string>root</string>
 		<key>GroupName</key>
