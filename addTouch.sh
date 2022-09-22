@@ -7,6 +7,6 @@ exec 1>> /tmp/addtouch.log 2>&1
 auth_line='auth       sufficient     pam_tid.so'
 
 # Check if pam_tid.so exists, if not, add it
-if ! grep -e "^${auth_line}$" /etc/pam.d/sudo; then
+if ! grep -e "^${auth_line}$" /etc/pam.d/sudo 1> /dev/null; then
 	sudo sed -E -i '.bak' "1s/^(#.*)$/\1\n${auth_line}/" /etc/pam.d/sudo
 fi
