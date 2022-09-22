@@ -3,15 +3,29 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>com.user.addtouch</string>
+        	<string>com.user.addtouch</string>
+		<key>EnvironmentVariables</key>
+			<dict>
+				<key>PATH</key>
+					<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:</string>
+			</dict>
         <key>ProgramArguments</key>
-        <array>
-            <string>/usr/local/bin/addTouch.sh</string>
-        </array>
+			<array>
+				<string>/usr/local/bin/addTouch.sh</string>
+			</array>
+		<key>StandardOutPath</key>
+			<string>/tmp/com.user.addtouch.log</string>
+		<key>StandardErrorPath</key>
+			<string>/tmp/com.user.addtouch.log</string>
+		<key>UserName</key>
+			<string>root</string>
+		<key>GroupName</key>
+			<string>wheel</string>
         <key>RunAtLoad</key>
-        <true/>
+        	<true/>
+		<key>LaunchOnlyOnce</key>
+			<true/>
         <key>KeepAlive</key>
-        <false/>
+        	<false/>
     </dict>
 </plist>
-
