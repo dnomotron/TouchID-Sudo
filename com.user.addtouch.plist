@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>Label</key>
-        	<string>com.user.addtouch</string>
-		<key>EnvironmentVariables</key>
-			<dict>
-				<key>PATH</key>
-					<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:</string>
-			</dict>
-        <key>ProgramArguments</key>
-			<array>
-				<string>/usr/local/bin/addTouch.sh</string>
-			</array>
-		<key>UserName</key>
-			<string>root</string>
-		<key>GroupName</key>
-			<string>wheel</string>
-        <key>RunAtLoad</key>
-        	<true/>
-		<key>LaunchOnlyOnce</key>
-			<true/>
-        <key>KeepAlive</key>
-        	<false/>
-    </dict>
+<dict>
+	<key>Label</key>
+		<string>com.user.addtouch</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+			<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:</string>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/bin/addTouch.sh</string>
+	</array>
+	<key>UserName</key>
+		<string>root</string>
+	<key>GroupName</key>
+		<string>wheel</string>
+	<key>RunAtLoad</key>
+		<true/>
+	<key>LaunchOnlyOnce</key>
+		<true/>
+	<key>KeepAlive</key>
+		<false/>
+</dict>
 </plist>
